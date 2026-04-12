@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top header section -->
+  <header>
+    <div class="header-inner">
+
+      <h1>Archive Explorer</h1>
+      <p>Search historical images and videos from world archives</p>
+
+      <!-- Search bar -->
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder='Enter URL or keywords...'>
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <!-- Filter dropdowns -->
+      <div class="filters">
+
+        <select id="source">
+          <option value="archive">Internet Archive</option>
+          <option value="europeana">Europeana</option>
+        </select>
+
+        <select id="mediaType">
+          <option value="image">Images</option>
+          <option value="movies">Videos</option>
+          <option value="texts">Texts</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="relevant">Default Order</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="alpha">A–Z (Title)</option>
+        </select>
+
+        <select id="timePeriod">
+          <option value="any">Any Time</option>
+          <option value="before1900">Before 1900</option>
+          <option value="1900to1950">1900 to 1950</option>
+          <option value="1950to2000">1950 to 2000</option>
+          <option value="after2000">After 2000</option>
+        </select>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Results section -->
+  <main>
+    <p id="status">Search something to get started.</p>
+    <div id="grid"></div>
+    <button id="loadMoreBtn">Show More</button>
+  </main>
+
+  <!-- Load config first, then script -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
